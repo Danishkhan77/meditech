@@ -5,6 +5,7 @@ use App\Http\Controllers\ChartAccountController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ContractorController;
 use App\Http\Controllers\ContractorPayController;
+use App\Http\Controllers\DCinvoiceController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\EmployeeSalaryController;
 use App\Http\Controllers\HospitalController;
@@ -52,5 +53,15 @@ Route::post('/hospital/store',[HospitalController::class, 'store']);
 Route::get('/hospital/{id}/edit',[HospitalController::class, 'edit']);
 Route::put('/hospital/{id}/update',[HospitalController::class, 'update']);
 Route::get('/hospital/{id}/delete',[HospitalController::class, 'destroy']);
+
+// Hospitals
+    
+Route::get('/manage/dc_invoice',[DCinvoiceController::class, 'index']);
+Route::get('/dc_invoice/create',[DCinvoiceController::class, 'create']);
+Route::post('/dc_invoice/store',[DCinvoiceController::class, 'store']);
+Route::get('/dc_invoice/{id}/edit',[DCinvoiceController::class, 'edit']);
+Route::put('/dc_invoice/{id}/update',[DCinvoiceController::class, 'update']);
+Route::get('/dc_invoice/{id}/delete',[DCinvoiceController::class, 'destroy']);
+
 
 });

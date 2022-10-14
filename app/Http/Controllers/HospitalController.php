@@ -79,7 +79,7 @@ class HospitalController extends Controller
             return back()->with('success',"Hospital Deleted Successfully");
         }
         else{
-            return back();
+            return back()->with('success','No such Record Found');
         }
     }
 }

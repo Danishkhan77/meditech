@@ -20,9 +20,9 @@
             </li>
             
             {{-- Invoice --}}
-            <li class="menu {{ ($category_name === 'hospitals') ? 'active' : '' }}" >
+            <li class="menu {{ ($category_name === 'invoice') ? 'active' : '' }}" >
 
-                <a href="#hospitals" data-toggle="collapse" aria-expanded="{{ ($category_name === 'hospitals') ? 'true' : 'false' }}" class="dropdown-toggle">
+                <a href="#invoice" data-toggle="collapse" aria-expanded="{{ ($category_name === 'invoice') ? 'true' : 'false' }}" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                         <span>Invoice</span>
@@ -31,12 +31,12 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
                     </div>
                 </a>
-                <ul class="collapse submenu recent-submenu mini-recent-submenu list-unstyled {{ ($category_name === 'hospitals') ? 'show' : '' }}" id="hospitals" data-parent="#accordionExample">
-                    <li class="{{($page_name === 'create_hospital') ? 'active' : '' }}">
-                        <a href="{{url('/hospital/create')}}"> Create Invoice </a>
+                <ul class="collapse submenu recent-submenu mini-recent-submenu list-unstyled {{ ($category_name === 'invoice') ? 'show' : '' }}" id="invoice" data-parent="#accordionExample">
+                    <li class="{{($page_name === 'manage_dcinvoices') ? 'active' : '' }}">
+                        <a href="{{url('/manage/dc_invoice')}}"> DC Invoice </a>
                     </li>
                     <li class="{{($page_name === 'manage_hospitals') ? 'active' : '' }}">
-                        <a href="{{url('/manage/hospitals')}}"> Manage Invoice </a>
+                        <a href="{{url('/manage/main_invoice')}}"> Main Invoice </a>
                     </li>
                     
                 </ul>
